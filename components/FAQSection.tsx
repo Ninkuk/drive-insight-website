@@ -4,59 +4,51 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import Link from "next/link";
 
 export const FAQSection = () => {
     return (
-        <div style={{ padding: "20px" }}>
-            {/* <h1 style={{ textAlign: "center", fontSize: 35 }}>FAQs</h1> */}
-            <br />
-
+        <div className="flex flex-col gap-5">
+            <div>
+                <h2 className="text-center">Frequently Asked Questions</h2>
+                <p className="text-center">Learn more about our product.</p>
+            </div>
             <Accordion
                 type="single"
                 collapsible
                 className="flex w-full flex-col gap-3">
                 <AccordionItem value="item-1">
-                    <AccordionTrigger>
-                        Where can I find the OBD port in my car?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Is my car compatible?</AccordionTrigger>
                     <AccordionContent>
-                        The OBD port is typically located beneath the dashboard
-                        on the driver`&apos;s side, near the steering column or
-                        around the fuse box in the footwell area. It can also be
-                        found near the pedals or sometimes in the center console
-                        or glove compartment, depending on the car model. If you
-                        can`&apos;t locate it, checking the car`&apos;s manual
-                        can provide the exact position.
+                        Please check the compatibility section for more
+                        information.
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                     <AccordionTrigger>
-                        How do I know if the device is working properly?
+                        Where do I find the OBD port?
                     </AccordionTrigger>
                     <AccordionContent>
-                        To ensure the OBD device is working properly, insert it
-                        firmly into the OBD port, making sure it fits snugly.
-                        Check the LED lights on the device—typically, a steady
-                        or flashing light indicates a proper connection. If the
-                        lights aren`&apos;t behaving as expected, try unplugging
-                        and re-plugging the device to ensure it`&apos;s aligned
-                        correctly.
+                        The OBD port is usually located on the driver's side of
+                        the car. Please refer to your car manual for more
+                        information.
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
                     <AccordionTrigger>
-                        Can I use 1 device with 2 cars?
+                        How do I connect my car?
                     </AccordionTrigger>
-                    <AccordionContent>No. Please buy another.</AccordionContent>
+                    <AccordionContent>
+                        Plug the device into the OBD port and turn on the car.
+                        Then setup the device using the instructions on the app.
+                    </AccordionContent>
                 </AccordionItem>
             </Accordion>
 
-            <Link href="/faq">
+            {/* <Link href="/faq">
                 <h6 style={{ textAlign: "right", color: "blue" }}>
                     Click here for more information
                 </h6>
-            </Link>
+            </Link> */}
         </div>
     );
 };

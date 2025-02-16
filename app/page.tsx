@@ -7,7 +7,7 @@ import { HeroSection } from "@/components/HeroSection";
 
 export default function Home() {
     return (
-        <div className="container">
+        <div className="container flex flex-col gap-10">
             {/* PAGE SECTIONS */}
             <HeroSection />
             <BenefitsSection />

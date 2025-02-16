@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
     const teamMembers = [
@@ -72,6 +72,7 @@ const About = () => {
                             width={150}
                             height={150}
                             alt="quotes"
+                            unoptimized
                         />
                         <Card>
                             <CardContent className="p-6">

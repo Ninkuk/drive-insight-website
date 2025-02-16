@@ -14,12 +14,17 @@ import google_play_badge from "../public/Google_Play.svg";
 
 export const Footer = () => {
     return (
-        <div className="w-full bg-background">
+        <div className="w-full bg-slate-900">
             <div className="container flex flex-col gap-6 py-6 md:flex-row">
                 {/* COMPANY INFO */}
                 <div className="flex flex-1 flex-col gap-4">
                     {/* LOGO */}
-                    <Image src={logo} alt="Drive Insight Logo" width={140} />
+                    <Image
+                        src={logo}
+                        alt="Drive Insight Logo"
+                        width={140}
+                        unoptimized
+                    />
                     {/* SOCIAL LINKS */}
                     <div className="flex gap-4">
                         <Link href="" target="_blank">
@@ -48,6 +53,7 @@ export const Footer = () => {
                                 src={google_play_badge}
                                 alt="Get it on Google Play"
                                 width={100}
+                                unoptimized
                             />
                         </Link>
                         <Link href="https://apple.com" target="_blank">
@@ -55,6 +61,7 @@ export const Footer = () => {
                                 src={app_store_badge}
                                 alt="Download on the App Store"
                                 width={100}
+                                unoptimized
                             />
                         </Link>
                     </div>
@@ -65,26 +72,29 @@ export const Footer = () => {
                     <div className="flex flex-col gap-2">
                         <p className="mb-1 font-bold text-slate-300">Company</p>
                         <Link href="/about">About</Link>
-                        <Link href="/about">Customers</Link>
-                        <Link href="/about">Store</Link>
+                        <Link
+                            href="https://www.ebay.com/itm/396119923371"
+                            target="_blank">
+                            Store
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-2">
                         <p className="mb-1 font-bold text-slate-300">
                             Resources
                         </p>
-                        <Link href="/about" className="hover:underline">
+                        <Link href="/faq" className="hover:underline">
                             FAQ
                         </Link>
-                        <Link href="/about">Guides</Link>
-                        <Link href="/about">Support</Link>
+                        <Link href="/guides">Guides</Link>
+                        <Link href="/support">Support</Link>
                     </div>
                 </div>
             </div>
 
             {/* COPYRIGHT AND LEGAL */}
-            <div className="flex flex-col justify-between bg-slate-900 px-6 py-2 md:flex-row md:items-center">
+            <div className="flex flex-col justify-between bg-slate-800 px-6 py-2 md:flex-row md:items-center">
                 <p className="text-sm">
-                    © 2024 Drive Insight. All rights reserved.
+                    © 2025 SAMAVESH LLC. All rights reserved.
                 </p>
                 <div className="flex items-center gap-2 text-sm">
                     <Link href="/terms">Terms of Service</Link>

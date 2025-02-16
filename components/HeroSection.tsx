@@ -13,6 +13,7 @@ export const HeroSection = () => {
                 width={500}
                 height={500}
                 className="flex-1"
+                unoptimized
             />
 
             <div className="flex flex-1 flex-col gap-6">
@@ -28,7 +29,9 @@ export const HeroSection = () => {
 
                 <div className="flex flex-col gap-3">
                     {/* CTA BUTTON */}
-                    <Link href="/store">
+                    <Link
+                        href="https://www.ebay.com/itm/396119923371"
+                        target="_blank">
                         <Button
                             className="w-full px-2 md:w-fit md:gap-4 md:pl-4"
                             size="lg">
