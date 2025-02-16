@@ -22,13 +22,13 @@ const About = () => {
         {
             name: "Rhea",
             role: "Software Engineer",
-            description: "CS Master's student at ASU.",
+            description: "CS Master&apos;s student at ASU.",
             picture: "",
         },
         {
             name: "Maia",
             role: "Software Engineer",
-            description: "CS Master's student at ASU.",
+            description: "CS Master&apos;s student at ASU.",
             picture: "/maia.jpg",
         },
     ];
@@ -59,11 +59,11 @@ const About = () => {
                             data privacy.
                         </p>
                         <p>
-                            The journey began with Ninad's prototype in Python
-                            two years ago, driven by a curiosity to understand
-                            fuel consumption during peak gas prices. This early
-                            experiment evolved into something much more
-                            ambitious.
+                            The journey began with Ninad&apos;s prototype in
+                            Python two years ago, driven by a curiosity to
+                            understand fuel consumption during peak gas prices.
+                            This early experiment evolved into something much
+                            more ambitious.
                         </p>
                     </div>
                     <div className="mt-2">
@@ -78,7 +78,7 @@ const About = () => {
                             <CardContent className="p-6">
                                 {/* FFC300 */}
 
-                                <h3>Educate, don't just enforce</h3>
+                                <h3>Educate, don&apos;t just enforce</h3>
                                 <p className="italic">
                                     - This principle guides everything we do at
                                     Drive Insight.
@@ -89,9 +89,9 @@ const About = () => {
                 </div>
             </section>
 
-            {/* The Problem We're Solving */}
+            {/* The Problem We&apos;re Solving */}
             <section className="mb-16">
-                <h2>The Problem We're Out to Solve</h2>
+                <h2>The Problem We&apos;re Out to Solve</h2>
                 <Card className="md:justify-center">
                     <CardContent className="p-6">
                         <h3 className="mb-4">Industry Reality</h3>
@@ -133,7 +133,7 @@ const About = () => {
             <section className="mb-16">
                 <h2 className="text-center">Meet Our Team</h2>
                 <p className="mx-auto mb-12 max-w-2xl text-center">
-                    We're a dedicated team of automotive enthusiasts and
+                    We&apos;re a dedicated team of automotive enthusiasts and
                     technology experts working to revolutionize the driving
                     experience.
                 </p>
@@ -141,10 +141,13 @@ const About = () => {
                     {teamMembers.map((member, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="mb-4 h-48 w-48 overflow-hidden rounded-full bg-muted">
-                                <img
+                                <Image
                                     src={member.picture}
                                     alt={member.name}
+                                    width={48}
+                                    height={48}
                                     className="h-full w-full object-cover"
+                                    unoptimized
                                 />
                             </div>
                             <h3 className="mb-2">{member.name}</h3>
@@ -165,16 +168,16 @@ const About = () => {
                         <p className="mb-4">
                             Drive Insight is at the forefront of incorporating
                             AI technology to generate even deeper driving
-                            insights. We're committed to continuous innovation
-                            while maintaining our core values of privacy and
-                            user empowerment.
+                            insights. We&apos;re committed to continuous
+                            innovation while maintaining our core values of
+                            privacy and user empowerment.
                         </p>
                         <p>
                             Our vision extends beyond just data collection -
-                            we're building a platform that helps new drivers
-                            become safer and experienced drivers become better,
-                            all while keeping their data completely in their
-                            control.
+                            we&apos;re building a platform that helps new
+                            drivers become safer and experienced drivers become
+                            better, all while keeping their data completely in
+                            their control.
                         </p>
                     </CardContent>
                 </Card>

@@ -7,12 +7,13 @@ export default function Terms() {
             <div className="flex flex-col gap-2">
                 <h2>1. Introduction</h2>
                 <p>
-                    These Terms and Conditions ("Terms") govern your use of the
-                    Drive Insight services and products ("Service"), including
-                    the use of our Velocity 1.0 (OBD2) devices and associated
-                    mobile applications ("App"). By accessing or using the
-                    Service, you agree to comply with these Terms. If you do not
-                    agree with these Terms, please do not use the Service.
+                    These Terms and Conditions (&quot;Terms&quot;) govern your
+                    use of the Drive Insight services and products
+                    (&quot;Service&quot;), including the use of our Velocity 1.0
+                    (OBD2) devices and associated mobile applications
+                    (&quot;App&quot;). By accessing or using the Service, you
+                    agree to comply with these Terms. If you do not agree with
+                    these Terms, please do not use the Service.
                 </p>
             </div>
             <div className="flex flex-col gap-2">
@@ -54,10 +55,11 @@ export default function Terms() {
             <div className="flex flex-col gap-2">
                 <h2>5. Vehicle Warranty</h2>
                 <p>
-                    The use of Drive Insight’s Velocity 1.0 (OBD2) device does
-                    not void or affect the warranty of your vehicle. However, we
-                    recommend consulting your vehicle’s manufacturer or dealer
-                    for additional information about any potential impacts.
+                    The use of Drive Insight&apos;s Velocity 1.0 (OBD2) device
+                    does not void or affect the warranty of your vehicle.
+                    However, we recommend consulting your vehicle&apos;s
+                    manufacturer or dealer for additional information about any
+                    potential impacts.
                 </p>
             </div>
             <div className="flex flex-col gap-2">
