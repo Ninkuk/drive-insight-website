@@ -8,13 +8,7 @@ export const CallToActionSection = () => {
         <div>
             {/* <h1>Call To Action Section</h1> */}
             <div className="flex flex-col items-center justify-center gap-4">
-                <Image
-                    src="obd.svg"
-                    height={300}
-                    width={300}
-                    alt="obd"
-                    unoptimized
-                />
+                <Image src="obd.svg" height={300} width={300} alt="obd" />
                 <Link
                     href="https://www.ebay.com/itm/396119923371"
                     target="_blank">

@@ -19,12 +19,7 @@ export const Footer = () => {
                 {/* COMPANY INFO */}
                 <div className="flex flex-1 flex-col gap-4">
                     {/* LOGO */}
-                    <Image
-                        src={logo}
-                        alt="Drive Insight Logo"
-                        width={140}
-                        unoptimized
-                    />
+                    <Image src={logo} alt="Drive Insight Logo" width={140} />
                     {/* SOCIAL LINKS */}
                     <div className="flex gap-4">
                         <Link href="" target="_blank">
@@ -53,7 +48,6 @@ export const Footer = () => {
                                 src={google_play_badge}
                                 alt="Get it on Google Play"
                                 width={100}
-                                unoptimized
                             />
                         </Link>
                         <Link href="https://apple.com" target="_blank">
@@ -61,7 +55,6 @@ export const Footer = () => {
                                 src={app_store_badge}
                                 alt="Download on the App Store"
                                 width={100}
-                                unoptimized
                             />
                         </Link>
                     </div>

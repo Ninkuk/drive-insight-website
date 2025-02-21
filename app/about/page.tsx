@@ -72,7 +72,6 @@ const About = () => {
                             width={150}
                             height={150}
                             alt="quotes"
-                            unoptimized
                         />
                         <Card>
                             <CardContent className="p-6">
@@ -147,7 +146,6 @@ const About = () => {
                                     width={48}
                                     height={48}
                                     className="h-full w-full object-cover"
-                                    unoptimized
                                 />
                             </div>
                             <h3 className="mb-2">{member.name}</h3>
