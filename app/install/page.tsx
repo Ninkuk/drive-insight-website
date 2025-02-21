@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdLooks3, MdLooksOne, MdLooksTwo } from "react-icons/md";
 import app_store_badge from "../../public/App_Store.svg";
-import google_play_badge from "../../public/Google_Play.svg";
 import obd from "../../public/obd.svg";
 
 export default function Install() {
@@ -34,12 +33,11 @@ export default function Install() {
                             Download the app
                         </CardTitle>
                         <CardDescription>
-                            Download the Drive Insight app from the Google Play
-                            Store or the App Store.
+                            Download the Drive Insight app from the App Store.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="flex flex-row gap-4">
-                        <Link
+                        {/* <Link
                             href="https://google.com"
                             className="flex flex-1"
                             target="_blank">
@@ -48,15 +46,15 @@ export default function Install() {
                                 alt="Get it on Google Play"
                                 className="flex-1"
                             />
-                        </Link>
+                        </Link> */}
                         <Link
-                            href="https://apple.com"
+                            href="https://apps.apple.com/us/app/drive-insight-master-the-ride/id6740708847"
                             className="flex flex-1"
                             target="_blank">
                             <Image
                                 src={app_store_badge}
                                 alt="Download on the App Store"
-                                className="flex-1"
+                                className="mx-auto h-auto w-1/2"
                             />
                         </Link>
                     </CardContent>

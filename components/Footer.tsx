@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa6";
 import app_store_badge from "../public/App_Store.svg";
 import logo from "../public/DIS_Logo_Dark.png";
-import google_play_badge from "../public/Google_Play.svg";
 
 export const Footer = () => {
     return (
@@ -43,14 +42,16 @@ export const Footer = () => {
                     </div>
                     {/* STORE BADGES */}
                     <div className="flex gap-4">
-                        <Link href="https://google.com" target="_blank">
+                        {/* <Link href="https://google.com" target="_blank">
                             <Image
                                 src={google_play_badge}
                                 alt="Get it on Google Play"
                                 width={100}
                             />
-                        </Link>
-                        <Link href="https://apple.com" target="_blank">
+                        </Link> */}
+                        <Link
+                            href="https://apps.apple.com/us/app/drive-insight-master-the-ride/id6740708847"
+                            target="_blank">
                             <Image
                                 src={app_store_badge}
                                 alt="Download on the App Store"
