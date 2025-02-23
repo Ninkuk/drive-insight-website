@@ -14,18 +14,18 @@ const BenefitCard = ({
 }) => {
     return (
         <div
-            className="flex h-[350px] flex-1 flex-col justify-between gap-10 rounded-lg p-10"
+            className="flex flex-1 flex-col justify-between gap-10 rounded-lg p-10"
             style={{
                 // backgroundImage: `url(${imgPath})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                // backgroundSize: "cover",
+                // backgroundPosition: "center",
                 backgroundColor: backgroundColor,
             }}>
             <div className="text-slate-900" justify-center>
                 {icon}
             </div>
             <div>
-                <h1 className="font-medium text-slate-900">{title}</h1>
+                <h2 className="font-medium text-slate-900">{title}</h2>
                 <p className="text-xs font-extralight text-slate-900">
                     {description}
                 </p>
