@@ -40,7 +40,6 @@ export const BenefitsSection = () => {
                         title={item.title}
                         description=""
                         icon={item.icon}
-                        darkMode={false}
                         backgroundColor={item.backgroundColor}
                     />
                 ))}

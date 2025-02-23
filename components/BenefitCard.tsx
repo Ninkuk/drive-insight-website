@@ -3,7 +3,6 @@ const BenefitCard = ({
     description,
     icon,
     // imgPath,
-    darkMode = true,
     backgroundColor,
 }: {
     title: string;
