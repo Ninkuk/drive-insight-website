@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { Button } from "./ui/button";
@@ -7,13 +6,13 @@ export const HeroSection = () => {
     return (
         <div className="flex flex-col items-center justify-between md:flex-row-reverse">
             {/* HERO IMAGE */}
-            <Image
+            {/* <Image
                 src="/drive-insight-hero-mockup.png"
                 alt={""}
                 width={500}
                 height={500}
                 className="flex-1"
-            />
+            /> */}
 
             <div className="flex flex-1 flex-col gap-6">
                 {/* HEADLINE */}

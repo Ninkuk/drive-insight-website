@@ -1,4 +1,4 @@
-import { Fuel, KeyRound, ShieldCheck } from "lucide-react";
+import { Calendar, Car, ChartLine, Map, ShieldCheck } from "lucide-react";
 import BenefitCard from "./BenefitCard";
 
 export const BenefitsSection = () => {
@@ -7,28 +7,43 @@ export const BenefitsSection = () => {
             <h2 className="mb-5 text-center text-4xl font-bold">
                 Get more out of your drive
             </h2>
-            <div className="flex flex-col items-center gap-10 md:flex-row md:gap-8">
-                <BenefitCard
-                    title="Fuel Consumption and Cost"
-                    description="Track your fuel usage and expenses in real-time to help you drive more efficiently and save money."
-                    icon={<Fuel className="h-10 w-10" />}
-                    darkMode={false}
-                    // imgPath={"/benefit_fuel_2.webp"}
-                />
-                <BenefitCard
-                    title="Safety and Awareness"
-                    description=" Stay alert with driving insights designed to enhance road awareness and reduce risks."
-                    icon={<ShieldCheck className="h-10 w-10" />}
-                    // imgPath={"/benefit_safety_1.webp"}
-                    darkMode={false}
-                />
-                <BenefitCard
-                    title="Privacy Control"
-                    description="Enjoy full control over your driving data with customizable privacy settings that prioritize your security and peace of mind."
-                    icon={<KeyRound className="h-10 w-10" />}
-                    // imgPath={"/benefit_safety_2.webp"}
-                    darkMode={false}
-                />
+            <div className="flex flex-col items-center gap-5 md:flex-row md:gap-8">
+                {[
+                    {
+                        title: "Discover trip insights and driving analysis",
+                        icon: <Car className="h-10 w-10" />,
+                        backgroundColor: "#40E517",
+                    },
+                    {
+                        title: "Analyze every moment in both time and space",
+                        icon: <Map className="h-10 w-10" />,
+                        backgroundColor: "#93E517",
+                    },
+                    {
+                        title: "Observe long-term trends for all your vehicles",
+                        icon: <ChartLine className="h-10 w-10" />,
+                        backgroundColor: "#e5d200",
+                    },
+                    {
+                        title: "Track your journeys securely and seamlessly",
+                        icon: <ShieldCheck className="h-10 w-10" />,
+                        backgroundColor: "#E59317",
+                    },
+                    {
+                        title: "Review trips history for up to a month",
+                        icon: <Calendar className="h-10 w-10" />,
+                        backgroundColor: "#E54017",
+                    },
+                ].map((item, index) => (
+                    <BenefitCard
+                        key={index}
+                        title={item.title}
+                        description=""
+                        icon={item.icon}
+                        darkMode={false}
+                        backgroundColor={item.backgroundColor}
+                    />
+                ))}
             </div>
         </div>
     );
