@@ -3,10 +3,8 @@ import BenefitCard from "./BenefitCard";
 
 export const BenefitsSection = () => {
     return (
-        <div className="mt-5 flex flex-col gap-5">
-            <h2 className="mb-5 text-center text-4xl font-bold">
-                Get more out of your drive
-            </h2>
+        <div className="flex flex-col gap-2">
+            <h2 className="text-center">Get more out of your drive</h2>
             <div className="flex flex-col flex-wrap gap-2 lg:flex-row">
                 {[
                     {
