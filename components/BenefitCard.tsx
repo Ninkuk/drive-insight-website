@@ -25,7 +25,7 @@ const BenefitCard = ({
                 {icon}
             </div>
             <div>
-                <h2 className="font-medium text-slate-900">{title}</h2>
+                <h3 className="font-normal text-slate-900">{title}</h3>
                 <p className="text-xs font-extralight text-slate-900">
                     {description}
                 </p>

@@ -51,19 +51,19 @@
 
     /* TEXT STYLES */
     h1 {
-        @apply scroll-m-20 text-4xl font-extrabold tracking-tight text-slate-50 lg:text-5xl;
+        @apply scroll-m-20 text-5xl font-bold tracking-tight text-slate-50 lg:text-5xl;
     }
     h2 {
-        @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight text-slate-100 first:mt-0;
+        @apply scroll-m-20 pb-2 text-4xl font-semibold tracking-tight text-slate-100 first:mt-0;
     }
     h3 {
-        @apply scroll-m-20 text-2xl font-semibold tracking-tight text-slate-200;
+        @apply scroll-m-20 text-3xl font-semibold tracking-tight text-slate-200;
     }
     h4 {
-        @apply scroll-m-20 text-xl font-semibold tracking-tight text-slate-300;
+        @apply scroll-m-20 text-2xl font-semibold tracking-tight text-slate-300;
     }
     h5 {
-        @apply scroll-m-20 text-lg font-semibold tracking-tight text-slate-400;
+        @apply scroll-m-20 text-xl font-semibold tracking-tight text-slate-400;
     }
     p {
         @apply text-slate-400;
