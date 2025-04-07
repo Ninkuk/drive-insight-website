@@ -1,11 +1,11 @@
-import { Car, ChartLine, Map, ShieldCheck } from "lucide-react";
+import { Calendar, Car, ChartLine, Map, ShieldCheck } from "lucide-react";
 import BenefitCard from "./BenefitCard";
 
 export const BenefitsSection = () => {
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
             <h2 className="text-center">Get more out of your drive</h2>
-            <div className="flex flex-col flex-wrap gap-2 lg:flex-row">
+            <div className="grid grid-cols-1 gap-2 lg:grid-cols-4">
                 {[
                     {
                         title: "Discover trip insights and driving analysis",
@@ -27,11 +27,11 @@ export const BenefitsSection = () => {
                         icon: <ShieldCheck className="h-10 w-10" />,
                         backgroundColor: "#E59317",
                     },
-                    // {
-                    //     title: "Review trips history for up to a month",
-                    //     icon: <Calendar className="h-10 w-10" />,
-                    //     backgroundColor: "#E54017",
-                    // },
+                    {
+                        title: "Review trips history for up to a month",
+                        icon: <Calendar className="h-10 w-10" />,
+                        backgroundColor: "#E54017",
+                    },
                 ].map((item, index) => (
                     <BenefitCard
                         key={index}
