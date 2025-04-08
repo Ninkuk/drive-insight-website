@@ -15,6 +15,16 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "./ui/alert-dialog";
 import { Button } from "./ui/button";
 import { Form, FormControl, FormField, FormItem } from "./ui/form";
 import {
@@ -26,20 +36,20 @@ import {
 } from "./ui/select";
 
 export default function CompatibilityForm() {
+    // State to store vehicle info
+    const years = useMemo(() => getYears(), []); // Memoize the year options to prevent recalculating each render˝
+    const [makes, setMakes] = useState<MenuItem[]>([]);
+    const [models, setModels] = useState<MenuItem[]>([]);
+    const [vehicleOptions, setVehicleOptions] = useState<MenuItem[]>([]);
+    const [vehicleRecord, setVehicleRecord] = useState<VehicleRecord | null>(
+        null,
+    );
+    const [alertText, setAlertText] = useState({ title: "", description: "" });
+
     const form = useForm<CompatibilityFormData>({
         resolver: zodResolver(compatibilitySchema),
         mode: "onBlur",
     });
-
-    const onSubmit = () => {
-        if (vehicleRecord) {
-            alert(
-                vehicleRecord.atvType === "EV"
-                    ? "Sorry, we do not support EV yet."
-                    : "Your vehicle is compatible with our device!",
-            );
-        }
-    };
 
     const [year, make, model, option] = form.watch([
         "year",
@@ -48,43 +58,36 @@ export default function CompatibilityForm() {
         "option",
     ]);
 
-    // State to store options
-    const [makes, setMakes] = useState<MenuItem[]>([]);
-    const [models, setModels] = useState<MenuItem[]>([]);
-    const [vehicleOptions, setVehicleOptions] = useState<MenuItem[]>([]);
-    const [vehicleRecord, setVehicleRecord] = useState<VehicleRecord | null>(
-        null,
-    );
-
-    // Memoize the year options to prevent recalculating each render
-    const years = useMemo(() => getYears(), []);
+    const onSubmit = useCallback(async () => {
+        setAlertText(
+            vehicleRecord && vehicleRecord.atvType === "EV"
+                ? {
+                      title: "Unsupported",
+                      description: "Sorry, we do not support EVs yet.",
+                  }
+                : {
+                      title: "Supported",
+                      description:
+                          "Your vehicle is compatible with our device!",
+                  },
+        );
+    }, [vehicleRecord]);
 
     const fetchMakes = useCallback(async () => {
-        if (year) {
-            const fetchedMakes = await getMakes(year);
-            setMakes(fetchedMakes);
-        }
+        if (year) setMakes(await getMakes(year));
     }, [year]);
 
     const fetchModels = useCallback(async () => {
-        if (year && make) {
-            const fetchedModels = await getModels(year, make);
-            setModels(fetchedModels);
-        }
+        if (year && make) setModels(await getModels(year, make));
     }, [year, make]);
 
     const fetchVehicleOptions = useCallback(async () => {
-        if (year && make && model) {
-            const fetchedOptions = await getVehicleOptions(year, make, model);
-            setVehicleOptions(fetchedOptions);
-        }
+        if (year && make && model)
+            setVehicleOptions(await getVehicleOptions(year, make, model));
     }, [year, make, model]);
 
     const fetchVehicleRecord = useCallback(async () => {
-        if (option) {
-            const fetchedRecord = await getVehicleRecord(option);
-            setVehicleRecord(fetchedRecord);
-        }
+        if (option) setVehicleRecord(await getVehicleRecord(option));
     }, [option]);
 
     useEffect(() => {
@@ -103,6 +106,10 @@ export default function CompatibilityForm() {
         fetchVehicleRecord();
     }, [fetchVehicleRecord]);
 
+    useEffect(() => {
+        onSubmit();
+    }, [onSubmit]);
+
     return (
         <Form {...form}>
             <form
@@ -112,11 +119,11 @@ export default function CompatibilityForm() {
                     control={form.control}
                     name="year"
                     render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <Select
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}>
-                                <FormControl>
+                                <FormControl className="w-full">
                                     <SelectTrigger value={field.value}>
                                         <SelectValue placeholder="Year" />
                                     </SelectTrigger>
@@ -136,12 +143,12 @@ export default function CompatibilityForm() {
                     control={form.control}
                     name="make"
                     render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <Select
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}
                                 disabled={!year}>
-                                <FormControl>
+                                <FormControl className="w-full">
                                     <SelectTrigger value={field.value}>
                                         <SelectValue placeholder="Make" />
                                     </SelectTrigger>
@@ -163,12 +170,12 @@ export default function CompatibilityForm() {
                     control={form.control}
                     name="model"
                     render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <Select
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}
                                 disabled={!year || !make}>
-                                <FormControl>
+                                <FormControl className="w-full">
                                     <SelectTrigger value={field.value}>
                                         <SelectValue placeholder="Model" />
                                     </SelectTrigger>
@@ -190,12 +197,12 @@ export default function CompatibilityForm() {
                     control={form.control}
                     name="option"
                     render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="flex-1">
                             <Select
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}
                                 disabled={!year || !make || !model}>
-                                <FormControl>
+                                <FormControl className="w-full">
                                     <SelectTrigger value={field.value}>
                                         <SelectValue placeholder="Option" />
                                     </SelectTrigger>
@@ -213,9 +220,26 @@ export default function CompatibilityForm() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" disabled={!option}>
-                    Check Compatibility
-                </Button>
+                <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                        <Button type="submit" disabled={!option}>
+                            Check Compatibility
+                        </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>
+                                {alertText.title}
+                            </AlertDialogTitle>
+                            <AlertDialogDescription>
+                                {alertText.description}
+                            </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                            <AlertDialogAction>Close</AlertDialogAction>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
             </form>
         </Form>
     );
