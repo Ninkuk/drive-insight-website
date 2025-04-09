@@ -34,8 +34,8 @@ export const Navbar = () => {
 
             {/* MOBILE LINKS */}
             {isOpen && (
-                <Card className="mt-3 md:hidden">
-                    <CardContent className="pt-4">
+                <Card className="md:hidden">
+                    <CardContent>
                         <NavLinks closeMenu={closeMenu} />
                     </CardContent>
                 </Card>
@@ -50,7 +50,7 @@ export const Navbar = () => {
 };
 
 const NavLinks = ({ closeMenu }: { closeMenu: () => void }) => {
-    const links = [
+    const links: { href: string; label: string }[] = [
         { href: "/about", label: "About" },
         { href: "/faq", label: "FAQ" },
         { href: "/guides", label: "Guides" },
