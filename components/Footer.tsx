@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     FaDiscord,
-    FaFacebook,
+    FaEnvelope,
     FaInstagram,
     FaLinkedin,
-    FaXTwitter,
-    FaYoutube,
 } from "react-icons/fa6";
 import app_store_badge from "../public/App_Store.svg";
 import logo from "../public/DIS_Logo_Dark.png";
@@ -21,22 +19,33 @@ export const Footer = () => {
                     <Image src={logo} alt="Drive Insight Logo" width={140} />
                     {/* SOCIAL LINKS */}
                     <div className="flex gap-4">
-                        <Link href="" target="_blank">
+                        <Link
+                            href="mailto:contact@mydriveinsight.com"
+                            target="_blank">
+                            <FaEnvelope className="text-2xl" />
+                        </Link>
+                        {/* <Link href="" target="_blank">
                             <FaFacebook className="text-2xl" />
                         </Link>
                         <Link href="" target="_blank">
                             <FaXTwitter className="text-2xl" />
-                        </Link>
-                        <Link href="" target="_blank">
+                        </Link> */}
+                        <Link
+                            href="https://www.instagram.com/mydriveinsight/"
+                            target="_blank">
                             <FaInstagram className="text-2xl" />
                         </Link>
-                        <Link href="" target="_blank">
+                        {/* <Link href="" target="_blank">
                             <FaYoutube className="text-2xl" />
-                        </Link>
-                        <Link href="" target="_blank">
+                        </Link> */}
+                        <Link
+                            href="https://discord.gg/Pznza8ZgNP"
+                            target="_blank">
                             <FaDiscord className="text-2xl" />
                         </Link>
-                        <Link href="" target="_blank">
+                        <Link
+                            href="https://www.linkedin.com/company/driveinsight"
+                            target="_blank">
                             <FaLinkedin className="text-2xl" />
                         </Link>
                     </div>
