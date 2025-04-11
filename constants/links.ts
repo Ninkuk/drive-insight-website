@@ -11,9 +11,9 @@ export const links = {
 };
 
 export const navLinks: { href: string; label: string }[] = [
-    links.about,
+    // links.about,
     links.faq,
-    links.guides,
+    // links.guides,
     links.support,
 ];
 
@@ -23,10 +23,10 @@ export const footerLinks: {
 }[] = [
     {
         category: "Company",
-        links: [links.about, links.store],
+        links: [links.store],
     },
     {
         category: "Resources",
-        links: [links.faq, links.guides, links.support],
+        links: [links.faq, links.support],
     },
 ];
