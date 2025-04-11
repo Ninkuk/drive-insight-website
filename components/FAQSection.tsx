@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import { faqs } from "@/constants/faq";
 
 export const FAQSection = () => {
     return (
@@ -16,39 +17,15 @@ export const FAQSection = () => {
                 type="single"
                 collapsible
                 className="flex w-full flex-col gap-3">
-                <AccordionItem value="item-1">
-                    <AccordionTrigger>Is my car compatible?</AccordionTrigger>
-                    <AccordionContent>
-                        Please check the compatibility section for more
-                        information.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                    <AccordionTrigger>
-                        Where do I find the OBD port?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        The OBD port is usually located on the driver&apos;s
-                        side of the car. Please refer to your car manual for
-                        more information.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3">
-                    <AccordionTrigger>
-                        How do I connect my car?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        Plug the device into the OBD port and turn on the car.
-                        Then setup the device using the instructions on the app.
-                    </AccordionContent>
-                </AccordionItem>
+                {faqs.map((faq) => (
+                    <AccordionItem key={faq.question} value={faq.question}>
+                        <AccordionTrigger className="text-xl">
+                            {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent>{faq.answer}</AccordionContent>
+                    </AccordionItem>
+                ))}
             </Accordion>
-
-            {/* <Link href="/faq">
-                <h6 style={{ textAlign: "right", color: "blue" }}>
-                    Click here for more information
-                </h6>
-            </Link> */}
         </div>
     );
 };

@@ -5,36 +5,21 @@ export enum Category {
     TYPE4 = "shipping",
 }
 
-export const faq: { title: string; description: string; category: Category }[] =
+export const faqs: { question: string; answer: string; category: Category }[] =
     [
         {
-            title: "TYPE 2",
-            description: "lorem ipsum",
-            category: Category.TYPE2,
+            question: "Is my car compatible?",
+            answer: "Please check the compatibility section for more information.",
+            category: Category.ALL,
         },
         {
-            title: "TYPE 2",
-            description: "lorem ipsum",
-            category: Category.TYPE2,
+            question: "Where do I find the OBD port?",
+            answer: "The OBD port is usually located on the driver's side of the car. Please refer to your car manual for more information.",
+            category: Category.ALL,
         },
         {
-            title: "TYPE 3",
-            description: "lorem ipsum",
-            category: Category.TYPE3,
-        },
-        {
-            title: "TYPE 4",
-            description: "lorem ipsum",
-            category: Category.TYPE4,
-        },
-        {
-            title: "TYPE 4",
-            description: "lorem ipsum",
-            category: Category.TYPE4,
-        },
-        {
-            title: "TYPE 2",
-            description: "lorem ipsum",
-            category: Category.TYPE2,
+            question: "How do I connect my car?",
+            answer: "Plug the device into the OBD port and turn on the car. Then setup the device using the instructions on the app.",
+            category: Category.ALL,
         },
     ];
