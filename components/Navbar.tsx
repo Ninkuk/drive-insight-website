@@ -1,5 +1,6 @@
 "use client";
 
+import { navLinks } from "@/constants/links";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useState } from "react";
@@ -50,16 +51,9 @@ export const Navbar = () => {
 };
 
 const NavLinks = ({ closeMenu }: { closeMenu: () => void }) => {
-    const links: { href: string; label: string }[] = [
-        { href: "/about", label: "About" },
-        { href: "/faq", label: "FAQ" },
-        { href: "/guides", label: "Guides" },
-        { href: "/support", label: "Support" },
-    ];
-
     return (
         <div className="flex flex-col gap-2 font-semibold md:flex-row md:items-center md:gap-4">
-            {links.map((link) => (
+            {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} onClick={closeMenu}>
                     {link.label}
                 </Link>

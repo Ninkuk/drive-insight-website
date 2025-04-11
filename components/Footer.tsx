@@ -1,3 +1,4 @@
+import { footerLinks } from "@/constants/links";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -72,25 +73,21 @@ export const Footer = () => {
 
                 {/* NAVIGATION */}
                 <div className="flex flex-row gap-10">
-                    <div className="flex flex-col gap-2">
-                        <p className="mb-1 font-bold text-slate-300">Company</p>
-                        <Link href="/about">About</Link>
-                        <Link
-                            href="https://www.ebay.com/itm/396119923371"
-                            target="_blank">
-                            Store
-                        </Link>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <p className="mb-1 font-bold text-slate-300">
-                            Resources
-                        </p>
-                        <Link href="/faq" className="hover:underline">
-                            FAQ
-                        </Link>
-                        <Link href="/guides">Guides</Link>
-                        <Link href="/support">Support</Link>
-                    </div>
+                    {footerLinks.map(({ category, links }) => (
+                        <div className="flex flex-col gap-2" key={category}>
+                            <p className="mb-1 font-bold text-slate-300">
+                                {category}
+                            </p>
+                            {links.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    target={link.newTab ? "_blank" : "_self"}>
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
 
