@@ -3,15 +3,21 @@ import { NextResponse, userAgent } from "next/server";
 
 export function middleware(req: NextRequest) {
     const { ua } = userAgent(req);
-    console.log(ua);
 
-    if (/iPhone|iPad|iPod/i.test(ua)) {
-        // Add AppStore Link
-        return NextResponse.redirect("https://www.apple.com/app-store/");
+    if (req.nextUrl.pathname === "/install") {
+        if (/iPhone|iPad|iPod/i.test(ua)) {
+            return NextResponse.redirect(
+                "https://apps.apple.com/us/app/drive-insight-master-the-ride/id6740708847",
+            );
+        }
+        // Once the play store app is live add an else if statement to route to play store
     }
-    // Once the play store app is live add an else if statement to route to play store
+
+    if (req.nextUrl.pathname === "/beta") {
+        return NextResponse.redirect("https://forms.gle/yd81yu1HZtfyo63t6");
+    }
 }
 
 export const config = {
-    matcher: "/install",
+    matcher: ["/install", "/beta"],
 };
