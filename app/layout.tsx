@@ -9,6 +9,14 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
     title: "Drive Insight",
     description: "Smart Insights for Smarter Driving",
+    openGraph: {
+        title: "Drive Insight",
+        description: "Smart Insights for Smarter Driving",
+        url: "https://mydriveinsight.com/",
+        siteName: "Drive Insight",
+        locale: "en_US",
+        type: "website",
+    },
 };
 
 export default function RootLayout({
