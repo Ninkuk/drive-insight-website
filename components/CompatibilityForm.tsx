@@ -15,6 +15,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaCarOn } from "react-icons/fa6";
 import {
     AlertDialog,
     AlertDialogAction,
@@ -114,7 +115,7 @@ export default function CompatibilityForm() {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="flex flex-col gap-3 md:flex-row">
+                className="flex flex-col gap-3 lg:flex-row">
                 <FormField
                     control={form.control}
                     name="year"
@@ -222,7 +223,11 @@ export default function CompatibilityForm() {
                 />
                 <AlertDialog>
                     <AlertDialogTrigger asChild>
-                        <Button type="submit" disabled={!option}>
+                        <Button
+                            type="submit"
+                            disabled={!option}
+                            className="flex items-center justify-center gap-2">
+                            <FaCarOn className="" />
                             Check Compatibility
                         </Button>
                     </AlertDialogTrigger>

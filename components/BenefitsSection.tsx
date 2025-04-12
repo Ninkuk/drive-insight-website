@@ -72,7 +72,7 @@ export const BenefitsSection = () => {
                             {card.icon}
                             <h2 className="text-inherit">{card.title}</h2>
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="flex justify-center">
                             <Image
                                 src={card.img}
                                 alt={card.title}

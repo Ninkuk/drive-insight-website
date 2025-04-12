@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 
 export default function Home() {
     return (
-        <div className="container flex flex-col gap-20 py-10">
+        <div className="container mx-auto flex flex-col gap-20 py-5 lg:py-10">
             {/* PAGE SECTIONS */}
             <HeroSection />
             <BenefitsSection />
