@@ -13,13 +13,18 @@ export const faqs: { question: string; answer: string; category: Category }[] =
             category: Category.ALL,
         },
         {
-            question: "Where do I find the OBD port?",
-            answer: "The OBD port is usually located on the driver's side of the car. Please refer to your car manual for more information.",
+            question: "Where can I find the OBD port in my car?",
+            answer: "The OBD port is typically located beneath the dashboard on the driver's side, near the steering column or around the fuse box in the footwell area. It can also be found near the pedals or sometimes in the center console or glove compartment, depending on the car model. If you can't locate it, checking the car's manual can provide the exact position.",
             category: Category.ALL,
         },
         {
-            question: "How do I connect my car?",
+            question: "How do I register my car?",
             answer: "Plug the device into the OBD port and turn on the car. Then setup the device using the instructions on the app.",
+            category: Category.ALL,
+        },
+        {
+            question: "How do I know if the device is installed properly?",
+            answer: "To ensure the OBD device is installed properly, insert it firmly into the OBD port, making sure it fits snugly. Check the LED lights on the device—typically, a steady or flashing light indicates a proper connection. If the lights aren't behaving as expected, try unplugging and re-plugging the device to ensure it's aligned correctly.",
             category: Category.ALL,
         },
     ];
