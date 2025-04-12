@@ -1,0 +1,8 @@
+{
+    "name": "Drive Insight",
+    "short_name": "Drive Insight",
+    "description": "Smart Insights for Smarter Driving",
+    "background_color": "#020617",
+    "theme_color": "#FFC300",
+    "categories": ["travel", "utilities", "productivity"]
+}
