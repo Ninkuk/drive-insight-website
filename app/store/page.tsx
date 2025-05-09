@@ -1,5 +1,19 @@
 import { CheckoutCounter } from "@/components/CheckoutCounter";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | Store",
+    description: "Store page for Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
 export default function Store() {
     return (

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
 import Link from "next/link";
 import {
     FaDiscord,
@@ -6,6 +7,19 @@ import {
     FaInstagram,
     FaLinkedin,
 } from "react-icons/fa6";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | Support",
+    description: "Get in touch with Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
 export default function Support() {
     return (

@@ -6,11 +6,25 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { MdLooks3, MdLooksOne, MdLooksTwo } from "react-icons/md";
 import app_store_badge from "../../public/App_Store.svg";
 import obd from "../../public/obd.svg";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | Install",
+    description: "Get started with Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
 export default function Install() {
     return (

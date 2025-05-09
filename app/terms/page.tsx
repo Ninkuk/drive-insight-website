@@ -1,3 +1,18 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | Terms",
+    description: "Terms of Service for Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
+
 export default function Terms() {
     return (
         <div className="container mx-auto flex flex-col gap-10 lg:px-60">

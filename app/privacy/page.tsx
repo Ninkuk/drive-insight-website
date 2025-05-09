@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "Drive Insight | Privacy",
+    description: "Privacy Policy for Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
+
 export default function Privacy() {
     return (
         <div className="container mx-auto flex flex-col gap-10 lg:px-60">

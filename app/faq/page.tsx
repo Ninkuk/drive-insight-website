@@ -5,6 +5,20 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqs } from "@/constants/faq";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | FAQ",
+    description: "Frequently Asked Questions about Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
 export default function FAQ() {
     return (

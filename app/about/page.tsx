@@ -1,40 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { teamMembers } from "@/constants/about";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const About = () => {
-    const teamMembers = [
-        {
-            name: "Ninad",
-            role: "Co-Founder & Technical Lead",
-            description:
-                "Car enthusiast with a passion for automotive software development.",
-            picture: "",
-        },
-        {
-            name: "Yug",
-            role: "Co-Founder & Product Lead",
-            description:
-                "Car enthusiast with a passion for automotive software development.",
-            picture: "",
-        },
-        {
-            name: "Rhea",
-            role: "Software Engineer",
-            description: "CS Master&apos;s student at ASU.",
-            picture: "",
-        },
-        {
-            name: "Maia",
-            role: "Software Engineer",
-            description: "CS Master&apos;s student at ASU.",
-            picture: "/maia.jpg",
-        },
-    ];
+export const metadata: Metadata = {
+    title: "Drive Insight | About",
+    description: "Learn more about Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
+const About = () => {
     return (
-        <div className="container mx-auto max-w-6xl px-4 py-8">
+        <div className="container mx-auto">
             {/* Hero Section */}
             <div className="mb-16 text-center">
                 <h1 className="mb-4">About Drive Insight</h1>
@@ -139,7 +125,7 @@ const About = () => {
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {teamMembers.map((member, index) => (
                         <div key={index} className="flex flex-col items-center">
-                            <div className="mb-4 h-48 w-48 overflow-hidden rounded-full bg-muted">
+                            <div className="bg-muted mb-4 h-48 w-48 overflow-hidden rounded-full">
                                 <Image
                                     src={member.picture}
                                     alt={member.name}
@@ -149,7 +135,7 @@ const About = () => {
                                 />
                             </div>
                             <h3 className="mb-2">{member.name}</h3>
-                            <p className="mb-2 font-semibold text-primary">
+                            <p className="text-primary mb-2 font-semibold">
                                 {member.role}
                             </p>
                             <p className="text-center">{member.description}</p>
@@ -189,7 +175,7 @@ const About = () => {
                     complete control over your data.
                 </p>
                 <Link href="/install">
-                    <Button className="rounded-lg bg-primary px-8 py-3 text-primary-foreground transition-colors hover:bg-primary/90">
+                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-8 py-3 transition-colors">
                         Get Started
                     </Button>
                 </Link>

@@ -1,4 +1,18 @@
 import CompatibilityForm from "@/components/CompatibilityForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Drive Insight | Compatibility",
+    description: "Check if your car is compatible with Drive Insight",
+    // openGraph: {
+    //     title: "Drive Insight",
+    //     description: "Smart Insights for Smarter Driving",
+    //     url: "https://mydriveinsight.com/",
+    //     siteName: "Drive Insight",
+    //     locale: "en_US",
+    //     type: "website",
+    // },
+};
 
 const Compatibility = () => {
     return (
