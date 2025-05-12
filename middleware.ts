@@ -13,9 +13,9 @@ export function middleware(req: NextRequest) {
         // Once the play store app is live add an else if statement to route to play store
     }
 
-    if (req.nextUrl.pathname === "/beta") {
-        return NextResponse.redirect("https://forms.gle/yd81yu1HZtfyo63t6");
-    }
+    // if (req.nextUrl.pathname === "/beta") {
+    //     return NextResponse.redirect("https://forms.gle/yd81yu1HZtfyo63t6");
+    // }
 }
 
 export const config = {
