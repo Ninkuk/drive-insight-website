@@ -6,6 +6,7 @@ import {
     FaEnvelope,
     FaInstagram,
     FaLinkedin,
+    FaTiktok,
 } from "react-icons/fa6";
 import app_store_badge from "../public/App_Store.svg";
 import logo from "../public/DIS_Logo_Dark.png";
@@ -21,9 +22,9 @@ export const Footer = () => {
                     {/* SOCIAL LINKS */}
                     <div className="flex gap-4">
                         <Link
-                            href="mailto:contact@mydriveinsight.com"
+                            href="www.tiktok.com/@mydriveinsight"
                             target="_blank">
-                            <FaEnvelope className="text-2xl" />
+                            <FaTiktok className="text-2xl" />
                         </Link>
                         {/* <Link href="" target="_blank">
                             <FaFacebook className="text-2xl" />
@@ -48,6 +49,11 @@ export const Footer = () => {
                             href="https://www.linkedin.com/company/driveinsight"
                             target="_blank">
                             <FaLinkedin className="text-2xl" />
+                        </Link>
+                        <Link
+                            href="mailto:contact@mydriveinsight.com"
+                            target="_blank">
+                            <FaEnvelope className="text-2xl" />
                         </Link>
                     </div>
                     {/* STORE BADGES */}
