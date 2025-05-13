@@ -22,7 +22,7 @@ export const Footer = () => {
                     {/* SOCIAL LINKS */}
                     <div className="flex gap-4">
                         <Link
-                            href="www.tiktok.com/@mydriveinsight"
+                            href="https://www.tiktok.com/@mydriveinsight"
                             target="_blank">
                             <FaTiktok className="text-2xl" />
                         </Link>
