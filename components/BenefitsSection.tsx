@@ -62,7 +62,7 @@ export const BenefitsSection = () => {
                     Discover the benefits of Drive Insight
                 </p>
             </div>
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 2xl:grid-cols-3">
                 {cards.map((card, index) => (
                     <Card
                         key={index}
